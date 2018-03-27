@@ -1,4 +1,4 @@
-/* Ohjelmistotekniikan harjoitustyö Tietotekniikan laboratioriokurssille
+/* Ohjelmistotekniikan harjoitustyö Tietotekniikan laboratoriokurssille
  * Author: Antti Auranen
  * 512934
  * ajaaur@utu.fi
