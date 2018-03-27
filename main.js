@@ -1,3 +1,12 @@
+/* Ohjelmistotekniikan harjoitustyö Tietotekniikan laboratioriokurssille
+ * Author: Antti Auranen
+ * 512934
+ * ajaaur@utu.fi
+ *
+ * Music credits: Split Phase - Catching Glitter http://freemusicarchive.org/music/Split_Phase/
+ * 
+ */
+
 window.onload = function() {
 
         //  Note that this html file is set to pull down Phaser 2.5.0 from the JS Delivr CDN.
@@ -8,17 +17,20 @@ window.onload = function() {
     var emitter;
     function preload () {
 
-        game.load.image('logo', 'logo.png');
-        game.load.image('haskell', 'haskell.png');
-        game.load.audio('musa', 'music.mp3');
+        game.load.image('logo', 'media/logo.png');
+        game.load.image('vim', 'media/vim2.png');
+        game.load.audio('musa', 'media/music.mp3');
 
 
     }
 
     function create () {
         game.physics.startSystem(Phaser.Physics.ARCADE);
+        
+        music = game.add.audio('musa');
+        music.play();
 
-        var backGround = game.add.sprite(-250, -120, 'haskell');
+        var backGround = game.add.sprite(0, 0, 'vim');
         emitter = game.add.emitter(game.world.centerX, 200);
         emitter.makeParticles('logo');
 
@@ -39,11 +51,6 @@ window.onload = function() {
         texti.body.velocity.setTo(100,100);
         texti.body.collideWorldBounds = true;
         texti.body.bounce.set(1);
-
-        
-        logo.anchor.setTo(0.5, 0.5);
-        music = game.add.audio('musa');
-        music.play();
     }
 
 };
